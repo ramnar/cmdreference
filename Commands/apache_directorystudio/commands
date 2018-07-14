@@ -1,0 +1,6 @@
+#To start/stop/status apache ldap server 
+sudo /etc/init.d/apacheds-2.0.0-M24-default start
+
+
+Installed apache ldapserver - Installation url - https://directory.apache.org/
+Apache directory studio is eclipse based tool to manage ldap server.Installation path - https://directory.apache.org/
