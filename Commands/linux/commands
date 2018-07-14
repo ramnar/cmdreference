@@ -1,0 +1,2 @@
+#kill process running at port 8080
+fuser -k 8080/tcp
