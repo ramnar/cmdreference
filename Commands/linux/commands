@@ -1,2 +1,13 @@
 #kill process running at port 8080
 fuser -k 8080/tcp
+
+>>Command to start a jar in background
+START /B java -jar -Dserver.port=8088 yourjar.jar
+
+>>Command to kill process
+-netstat -ano | findstr :8080
+-taskkill /PID <processid> /F
+
+>>Open ports in rhel
+$sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+$ sudo firewall-cmd --reload
