@@ -11,3 +11,6 @@ START /B java -jar -Dserver.port=8088 yourjar.jar
 >>Open ports in rhel
 $sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
 $ sudo firewall-cmd --reload
+
+#Check RAM size
+cat /proc/meminfo
