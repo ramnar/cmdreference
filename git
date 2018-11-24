@@ -1,0 +1,11 @@
+# clone a repository
+git clone https://github.com/ramnar/kubernetes.git
+
+#add remote repository for a fork
+git remote add upstream https://github.com/kubernetes/kubernetes.git
+
+#Never push to upstream master
+git remote set-url --push upstream no_push
+
+# Confirm that your remotes make sense:
+git remote -v
