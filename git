@@ -9,3 +9,7 @@ git remote set-url --push upstream no_push
 
 # Confirm that your remotes make sense:
 git remote -v
+
+#Proxy Configuration
+https://www.jhipster.tech/configuring-a-corporate-proxy/
+
