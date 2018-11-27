@@ -1,3 +1,7 @@
 #Upgrade JHipster
-
 yarn global upgrade generator-jhipster
+
+#Import JDL file in jhipster
+jhipster import-jdl your-jdl-file.jdl
+
+
