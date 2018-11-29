@@ -14,3 +14,6 @@ $ sudo firewall-cmd --reload
 
 #Check RAM size
 cat /proc/meminfo
+
+#Processor type
+cat /proc/cpuinfo | grep vendor | uniq
