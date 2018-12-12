@@ -1,0 +1,12 @@
+#Init server
+
+pg_ctl initdb --pgdata="/home/tomato/Documents/OpenSource/db"
+
+#Start server
+
+pg_ctl -D /home/tomato/Documents/OpenSource/db -l logfile start
+
+#Connect to postgres client
+
+psql postgres
+
