@@ -1,0 +1,16 @@
+#Prerequisites - gcc, make, tar, zlib, The GNU Readline library (These softwares are installed by default in ubuntu)
+
+
+wget https://ftp.postgresql.org/pub/source/v9.6.11/postgresql-9.6.11.tar.gz
+gunzip postgresql-9.6.11.tar.gz
+tar xf postgresql-9.6.11.tar
+cd postgresql-9.6.11
+./configure
+make
+make check
+make install
+LD_LIBRARY_PATH=/usr/local/pgsql/lib
+export LD_LIBRARY_PATH
+PATH=/usr/local/pgsql/bin:$PATH
+export PATH
+
