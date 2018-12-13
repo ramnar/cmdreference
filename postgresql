@@ -1,3 +1,5 @@
+#How to build postgresql from source code
+
 #Prerequisites - gcc, make, tar, zlib, The GNU Readline library (These softwares are installed by default in ubuntu)
 
 wget https://ftp.postgresql.org/pub/source/v9.6.11/postgresql-9.6.11.tar.gz
