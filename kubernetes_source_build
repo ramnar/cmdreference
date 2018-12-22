@@ -1,0 +1,39 @@
+#Steps to build kubernetes source code in EC2 Instance.Minimum 8GB RAM is required
+
+#Install golang
+
+sudo wget https://dl.google.com/go/go1.11.2.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.11.2.linux-amd64.tar.gz 
+GOPATH=/usr/local/go
+export PATH=$PATH:/usr/local/go/bin
+
+#Install gcc
+sudo yum install gcc
+
+#Install Docker
+sudo amazon-linux-extras install docker
+sudo service docker start
+
+#Checkout Source Code
+user=ramnar
+working_dir=/home/ec2-user/kube/src/k8s.io
+sudo mkdir -p $working_dir
+cd $working_dir
+sudo yum install git
+sudo git clone https://github.com/ramnar/kubernetes.git
+cd kubernetes/
+sudo git remote add upstream https://github.com/kubernetes/kubernetes.git
+sudo git remote set-url --push upstream no_push
+sudo git remote -v
+
+#Install etcd
+sudo hack/install-etcd.sh
+echo export PATH="\$PATH:$working_dir/kubernetes/third_party/etcd" >> ~/.profile
+PATH=$PATH:$working_dir/kubernetes/third_party/etcd
+sudo ln -s $(which etcd) /usr/bin/etcd
+sudo vi /etc/sudoers
+Add /usr/local/go/bin to the secure environment variable in the above file
+
+#Build Kubernetes
+export KUBERNETES_PROVIDER=local
+sudo hack/local-up-cluster.sh
