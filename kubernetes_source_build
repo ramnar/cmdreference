@@ -32,7 +32,8 @@ echo export PATH="\$PATH:$working_dir/kubernetes/third_party/etcd" >> ~/.profile
 PATH=$PATH:$working_dir/kubernetes/third_party/etcd
 sudo ln -s $(which etcd) /usr/bin/etcd
 sudo vi /etc/sudoers
-Add /usr/local/go/bin to the secure environment variable in the above file
+Add /usr/local/go/bin to secure_path in above file)
+(Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/go/bin)
 
 #Build Kubernetes
 export KUBERNETES_PROVIDER=local
