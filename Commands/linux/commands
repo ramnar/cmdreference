@@ -29,3 +29,9 @@ L	move to the bottom line of the current window (low)
 1G	move to the first line of the file
 20G	move to the 20th line of the file
 G	move to the last line of the file
+
+#Copy all files/folders from current directory to another directory
+cp -R * <destionfolderpath>
+
+#Create ssl keys without password
+ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''
