@@ -1,0 +1,30 @@
+#Git server setup
+
+$ sudo adduser git
+$ sudo passwd git
+$ su git
+$ cd
+$ mkdir .ssh && chmod 700 .ssh
+$ touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
+
+$ mkdir microservices-demo.git
+$ cd microservices-demo.git
+$ git init --bare
+
+#Create keys in client machine
+ssh-keygen -f ~/.ssh/id_rsa -N ''
+
+#Add publickey to authorized keys in server
+cat id_rsa.pub >> ~/.ssh/authorized_keys
+
+#Clone in client.Add new projects and commit
+git clone git@ec2-52-66-209-6.ap-south-1.compute.amazonaws.com:microservices-demo.git
+git status #red
+git add .
+git status #green
+git commit -m "Hello"
+git push
+
+#References
+git clone git@ec2-52-66-209-6.ap-south-1.compute.amazonaws.com:microservices-demo.git
+
