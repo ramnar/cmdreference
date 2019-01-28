@@ -1,12 +1,17 @@
-// Add items to the application launcher dropdown menu.
-window.OPENSHIFT_CONSTANTS.APP_LAUNCHER_NAVIGATION = [{
-  title: "Dashboard",                    // The text label
-  iconClass: "fa fa-dashboard",          // The icon you want to appear
-  href: "http://example.com/dashboard",  // Where to go when this item is clicked
-  tooltip: 'View dashboard'              // Optional tooltip to display on hover
+// Add featured applications to the top of the catalog.
+window.OPENSHIFT_CONSTANTS.SAAS_OFFERINGS = [{
+  title: "Dashboard",                         // The text label
+  icon: "fa fa-dashboard",                    // The icon you want to appear
+  url: "http://example.com/dashboard",        // Where to go when this item is clicked
+  description: "Open application dashboard."  // Short description
+}, {
+  title: "System Status",
+  icon: "fa fa-heartbeat",
+  url: "http://example.com/status",
+  description: "View system alerts and outages."
 }, {
   title: "Manage Account",
-  iconClass: "pficon pficon-user",
-  href: "http://example.com/account",
-  tooltip: "Update email address or password."
+  icon: "pficon pficon-user",
+  url: "http://example.com/account",
+  description: "Update email address or password."
 }];
