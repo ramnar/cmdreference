@@ -1,3 +1,4 @@
+'use strict';
 // Add featured applications to the top of the catalog.
 window.OPENSHIFT_CONSTANTS.SAAS_OFFERINGS = [{
   title: "Dashboard",                         // The text label
