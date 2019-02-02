@@ -1,0 +1,14 @@
+#Deploy angular container in openshift
+
+npx nodeshift --strictSSL=false --dockerImage=bucharestgold/centos7-s2i-web-app --imageTag=10.x --build.env OUTPUT_DIR=dist/your-angular-app-name --expose
+
+#Edit configmap of web-console
+
+oc edit configmap/webconsole-config -n openshift-web-console
+
+#restart a pod in openshift
+
+oc scale deployment webconsole --replicas=0 ; sleep 10; oc scale deployment webconsole --replicas=1
+
+#Get token of logged in user
+oc whoami -t
