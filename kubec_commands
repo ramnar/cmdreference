@@ -1,0 +1,14 @@
+#To login to a pod
+
+kubectl exec -it <podname> -- /bin/bash
+
+
+#To get resources
+
+kubectl get namespaces|pods|svc
+
+#To create a pod
+
+kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
+
+
