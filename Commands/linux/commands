@@ -38,3 +38,6 @@ ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''
 
 #Find all files having pattern in a folder
 grep -rnw '/path/to/somewhere/' -e 'pattern'
+
+#to see the tail of the log file
+tail -f <file_name>
