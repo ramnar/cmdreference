@@ -11,4 +11,15 @@ oc edit configmap/webconsole-config -n openshift-web-console
 oc scale deployment webconsole --replicas=0 ; sleep 10; oc scale deployment webconsole --replicas=1
 
 #Get token of logged in user
+
 oc whoami -t
+
+#to delete project
+
+oc delete project <project-name>
+
+#create project
+
+oc new-project <project-name>
+
+
