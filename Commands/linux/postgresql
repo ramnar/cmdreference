@@ -10,3 +10,11 @@ pg_ctl -D /home/tomato/Documents/OpenSource/db -l logfile start
 
 psql postgres
 
+#Install extension
+
+create extension <extension_name>
+
+#View extensions
+
+select * from pg_available_extensions 
+
