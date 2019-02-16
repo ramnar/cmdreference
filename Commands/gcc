@@ -1,0 +1,14 @@
+
+#To compile c program with libpq library
+
+gcc -c -I/usr/local/pgsql/include testprog.c
+
+
+#To create exe from object file
+
+gcc -o test testlibpq.o -L/usr/local/pgsql/lib -lpq
+
+
+#To run exe
+
+./test
