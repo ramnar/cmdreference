@@ -10,8 +10,6 @@ cd postgresql-9.6.11
 make
 make check
 make install
-LD_LIBRARY_PATH=/usr/local/pgsql/lib
-export LD_LIBRARY_PATH
-PATH=/usr/local/pgsql/bin:$PATH
-export PATH
+export LD_LIBRARY_PATH=/usr/local/pgsql/lib
+export PATH=/usr/local/pgsql/bin:$PATH
 
