@@ -19,3 +19,7 @@ git push origin master
 #Proxy Configuration
 https://www.jhipster.tech/configuring-a-corporate-proxy/
 
+#To apply patch
+
+git apply <patch-name>
+
