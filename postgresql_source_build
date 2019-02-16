@@ -13,3 +13,9 @@ make install
 export LD_LIBRARY_PATH=/usr/local/pgsql/lib
 export PATH=/usr/local/pgsql/bin:$PATH
 
+#To rebuild after changing code
+
+maken clean
+make
+make install
+
