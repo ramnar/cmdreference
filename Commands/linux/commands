@@ -41,3 +41,9 @@ grep -rnw '/path/to/somewhere/' -e 'pattern'
 
 #to see the tail of the log file
 tail -f <file_name>
+
+#To replace one word with another in a file. The below command replace file names which contain RoleBinding with pattern namespace: .* with
+namespace: kafka
+
+sed -i 's/namespace: .*/namespace: kafka/' install/cluster-operator/*RoleBinding*.yaml
+
