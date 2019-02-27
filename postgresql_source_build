@@ -2,9 +2,7 @@
 
 #Prerequisites - gcc, make, tar, zlib, The GNU Readline library,bison, flex
 
-wget https://ftp.postgresql.org/pub/source/v9.6.11/postgresql-9.6.11.tar.gz
-gunzip postgresql-9.6.11.tar.gz
-tar xf postgresql-9.6.11.tar
+git clone https://github.com/postgres/postgres.git
 cd postgresql-9.6.11
 ./configure
 make
