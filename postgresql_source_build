@@ -8,8 +8,9 @@ cd postgresql
 make
 make check
 make install
-export LD_LIBRARY_PATH=/usr/local/pgsql/lib
-export PATH=/usr/local/pgsql/bin:$PATH
+echo "export LD_LIBRARY_PATH=/usr/local/pgsql/lib" >> ~/.bashrc
+echo "export PATH=/usr/local/pgsql/bin:$PATH" >> ~/.bashrc
+source ~/.bashrc
 
 pg_ctl initdb --pgdata="/home/tomato/Documents/OpenSource/db"
 pg_ctl -D /home/tomato/Documents/OpenSource/db -l logfile start
