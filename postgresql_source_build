@@ -3,13 +3,17 @@
 #Prerequisites - gcc, make, tar, zlib, The GNU Readline library,bison, flex
 
 git clone https://github.com/postgres/postgres.git
-cd postgresql-9.6.11
+cd postgresql
 ./configure
 make
 make check
 make install
 export LD_LIBRARY_PATH=/usr/local/pgsql/lib
 export PATH=/usr/local/pgsql/bin:$PATH
+
+pg_ctl initdb --pgdata="/home/tomato/Documents/OpenSource/db"
+pg_ctl -D /home/tomato/Documents/OpenSource/db -l logfile start
+psql postgres
 
 #To rebuild after changing code
 
