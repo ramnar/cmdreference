@@ -22,4 +22,5 @@ https://www.jhipster.tech/configuring-a-corporate-proxy/
 #To apply patch
 
 git apply <patch-name>
+git apply --check <patch-name>
 
