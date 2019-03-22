@@ -24,3 +24,7 @@ https://www.jhipster.tech/configuring-a-corporate-proxy/
 git apply <patch-name>
 git apply --check <patch-name>
 
+#To create patch
+
+git diff --cached > mypatch.patch
+
