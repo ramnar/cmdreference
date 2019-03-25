@@ -19,7 +19,9 @@ oc whoami -t
 oc delete project <project-name>
 
 #create project
-
 oc new-project <project-name>
+
+#Export all project resources as template
+oc get -o yaml --export all > couchbase.yaml
 
 
