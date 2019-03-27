@@ -24,4 +24,42 @@ oc new-project <project-name>
 #Export all project resources as template
 oc get -o yaml --export all > couchbase.yaml
 
+---oc login
+https://masterdnsj2p5wq2nzrzvo.southindia.cloudapp.azure.com
+infyadmin
 
+
+--To create new user in openshift.Execute the below command in master node
+sudo htpasswd /etc/origin/master/htpasswd <username>
+
+--To give access to a project for a user
+oc login
+oc policy add-role-to-user admin <username> -n <project-name>
+
+#To give cluster admin access
+
+oc adm policy add-cluster-role-to-user cluster-admin <username>
+
+#Additional step required for recreating deleted users
+oc delete identity htpasswd_auth:username
+
+
+--steps to create a new app from private git repository and create a route
+       oc login
+  245  oc secrets new-sshauth sshsecret     --ssh-privatekey=$HOME/.ssh/id_rsa
+  248  oc secrets link builder sshsecret
+  250  oc new-app git@10.2.0.4:nodejs-ex.git --name testgit-nodejs   //create new app
+  251  oc logs -f bc/testgit-nodejs
+  252  oc set build-secret --source bc/testgit-nodejs sshsecret
+  253  oc start-build testgit-nodejs
+  254  oc logs -f bc/testgit-nodejs
+  255  oc status
+  256  oc status --suggest
+  259  oc get svc                           // to see list of all servics
+  260  oc expose svc/testgit-nodejs         //to create route
+  261  oc get route                         // to get the route
+
+
+--To see the urls of prometheus and graphana
+
+oc -n openshift-monitoring get routes
