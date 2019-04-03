@@ -63,3 +63,14 @@ oc delete identity htpasswd_auth:username
 --To see the urls of prometheus and graphana
 
 oc -n openshift-monitoring get routes
+
+--To import images in openshift internal registry
+#Connect to registry to import image from.Do docker pull.Then push image to docker internal registry as below
+#To get internal registry ip address
+oc get svc -n default | grep registry
+sudo docker tag  <image-id> <internalregistry-ip>:5000/openshift/<name-of-image>
+sudo docker login  -u <username> -p <token> <internalregistry-ip>:5000
+sudo docker push 172.30.3.154:5000/openshift/<name-of-image>
+oc project
+oc new-app openshift/<name-of-image> --name=edbapp
+
