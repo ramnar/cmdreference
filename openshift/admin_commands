@@ -1,0 +1,18 @@
+#To check the health of openshift
+
+References - https://docs.openshift.com/container-platform/3.11/day_two_guide/environment_health_checks.html
+
+oc get nodes
+
+#check for master, worker and infra nodes
+
+oc describe node {node-name}
+
+#check etcd health
+
+curl  https://<node_ip_where_etcd_is_running>:2379/health --cert /etc/origin/master/master.etcd-client.crt --key /etc/origin/master/master.etcd-client.key --cacert /etc/origin/master/master.etcd-ca.crt
+
+#check master public url health
+
+curl --cert /etc/origin/master/admin.crt --key /etc/origin/master/admin.key --cacert /etc/origin/master/ca.crt https://<masterPublicURL>:8443/healthz
+

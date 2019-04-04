@@ -47,3 +47,7 @@ namespace: kafka
 
 sed -i 's/namespace: .*/namespace: kafka/' install/cluster-operator/*RoleBinding*.yaml
 
+#Reload bashrc
+
+. ~/.bash_profile
+

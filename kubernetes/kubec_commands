@@ -11,4 +11,13 @@ kubectl get namespaces|pods|svc
 
 kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
 
+#To create a resource.Fails if resource already exists.Json or yaml files are accepted
+
+kubectl create -f <yaml_file_local_or_githubpath>
+
+#To create or update a resource if already present
+
+kubectl apply -f <yaml_file_local_or_githubpath>
+
+
 

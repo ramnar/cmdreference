@@ -1,0 +1,3 @@
+Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications
+
+daemonset - Container which is deployed in all the worker nodes in the kubernetes cluster

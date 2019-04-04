@@ -24,10 +24,6 @@ oc new-project <project-name>
 #Export all project resources as template
 oc get -o yaml --export all > couchbase.yaml
 
----oc login
-https://masterdnsj2p5wq2nzrzvo.southindia.cloudapp.azure.com
-infyadmin
-
 
 --To create new user in openshift.Execute the below command in master node
 sudo htpasswd /etc/origin/master/htpasswd <username>
