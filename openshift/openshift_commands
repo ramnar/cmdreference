@@ -1,3 +1,12 @@
+oc get pods --all-namespaces
+
+
+
+
+
+
+
+
 #Deploy angular container in openshift
 
 npx nodeshift --strictSSL=false --dockerImage=bucharestgold/centos7-s2i-web-app --imageTag=10.x --build.env OUTPUT_DIR=dist/your-angular-app-name --expose

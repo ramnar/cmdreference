@@ -22,3 +22,10 @@ maken clean
 make
 make install
 
+#To run individual tap test
+vcregress taptest src/bin/pg_ctl
+
+#To enable tap testing
+change to tap_test=>1 from tap_test=>undefined in config_default.pl
+
+

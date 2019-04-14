@@ -16,3 +16,15 @@ curl  https://<node_ip_where_etcd_is_running>:2379/health --cert /etc/origin/mas
 
 curl --cert /etc/origin/master/admin.crt --key /etc/origin/master/admin.key --cacert /etc/origin/master/ca.crt https://<masterPublicURL>:8443/healthz
 
+
+#restart kubernetes master components
+
+/usr/local/bin/master-restart api
+
+/usr/local/bin/master-restart controllers
+
+
+#sos reports for troubleshooting generated at /var/tmp/sos.VlbKrI 
+
+sosreport -k docker.all=on -k docker.logs=on
+
