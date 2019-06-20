@@ -28,3 +28,11 @@ git apply --check <patch-name>
 
 git diff --cached > mypatch.patch
 
+
+#To sync forked repository with actual repository
+git remote add upstream https://github.com/kubernetes/kubernetes.git
+
+git fetch upstream
+git merge upstream/master
+git push origin master
+
