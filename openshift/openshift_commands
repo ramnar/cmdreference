@@ -1,11 +1,8 @@
+#label and unlabel nodes
+oc label node <nodename> key=value
+oc label node <nodename> key-
+
 oc get pods --all-namespaces
-
-
-
-
-
-
-
 
 #Deploy angular container in openshift
 
