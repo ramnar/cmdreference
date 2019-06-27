@@ -1,3 +1,7 @@
+#Taint and untaint nodes
+oc adm taint nodes <nodename> status=maintenance:NoSchedule
+oc adm taint nodes <nodename> status-
+
 #label and unlabel nodes
 oc label node <nodename> key=value
 oc label node <nodename> key-
