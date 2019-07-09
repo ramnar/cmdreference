@@ -42,3 +42,12 @@ sudo hack/local-up-cluster.sh
 #References
 https://dzone.com/articles/easy-step-by-step-local-kubernetes-source-code-cha
 
+#Kubernetes Build Commands
+
+#Build specific package
+sudo make WHAT=cmd/kubectl
+
+#Run unit tests in a package
+sudo make test WHAT=./pkg/kubectl/cmd
+
+
