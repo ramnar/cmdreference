@@ -1,0 +1,13 @@
+  let flag: boolean=false ;
+  let line: string = "http://sample.com?modeltype="  + (flag?"institutional":"retail");;
+  
+  console.log(line);
+  
+  //sample code
+  
+  var flag  = false ;
+  var line = "http://sample.com?modeltype=" + (flag?"institutional":"retail");
+  
+  console.log(line);
+  
+  
