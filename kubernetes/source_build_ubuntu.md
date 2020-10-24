@@ -49,4 +49,9 @@ cluster/kubectl.sh cluster-info
 Kubernetes master is running at http://127.0.0.1:8080 # =&gt; Great!
 
 
+## Possible Issues
+
+Minimum supported version of golang and etcd might have changed since this is documented. Use the minimum supported versions of these softwares accordingly
+
+
 
