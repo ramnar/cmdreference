@@ -54,7 +54,7 @@ Kubernetes master is running at http://127.0.0.1:8080 # =&gt; Great!
 Minimum supported version of golang and etcd might have changed since this is documented. Use the minimum supported versions of these softwares accordingly
 
 
-## Refernce
+## References
 
 https://dzone.com/articles/easy-step-by-step-local-kubernetes-source-code-cha
 
