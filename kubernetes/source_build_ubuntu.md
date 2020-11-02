@@ -10,9 +10,12 @@ curl -L https://github.com/coreos/etcd/releases/download/v3.4.13/etcd-v3.4.13-li
 curl -sL https://storage.googleapis.com/golang/go1.15.linux-amd64.tar.gz | tar -C /usr/local -zxf -
 
 # Add it to your PATH
-export GOPATH=/gopath
 
-export PATH=$PATH:$GOPATH/bin:/usr/local/bin:/usr/local/go/bin/
+echo "export GOPATH=/gopath" >> ~/.bashrc
+
+echo "export PATH=$PATH:$GOPATH/bin:/usr/local/bin:/usr/local/go/bin/" >> ~/.bashrc
+
+. ~/.bashrc
 
 # Get kubernetes source code
 git clone --depth 1 https://github.com/kubernetes/kubernetes
