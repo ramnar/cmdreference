@@ -1,6 +1,7 @@
-## variables - string, int, float, boolean
+## Variables - string, int, float, boolean
 
 var age int = 23
+
 age := 23
 
 
