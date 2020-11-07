@@ -16,3 +16,7 @@ make test-cmd WHAT=service_accounts ( In https://github.com/kubernetes/kubernete
 ## setup minikube in local linux box
 
 https://minikube.sigs.k8s.io/docs/start/
+
+## Testing reference
+
+https://github.com/kubernetes/community/blob/master/contributors/devel/development.md#a-quick-start-for-testing-kubernetes
