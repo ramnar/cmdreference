@@ -1,10 +1,10 @@
-#ssh to ec2 box
+# ssh to ec2 box
 
 chmod 400 /path/my-key-pair.pem
 
 ssh -i /path/my-key-pair.pem my-instance-user-name@my-instance-public-dns-name
 
-#Prevent ssh connection from timeout
+# Prevent ssh connection from timeout
 
 Log in as root
 
