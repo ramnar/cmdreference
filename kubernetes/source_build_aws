@@ -2,15 +2,14 @@
 
 #Install golang
 
-sudo wget https://dl.google.com/go/go1.11.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.11.2.linux-amd64.tar.gz 
+sudo wget https://dl.google.com/go/go1.15.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.15.linux-amd64.tar.gz 
 GOPATH=/usr/local/go
 export PATH=$PATH:/usr/local/go/bin
 
-#Install gcc
+#Install gcc,git, docker
 sudo yum install gcc
-
-#Install Docker
+sudo yum install git
 sudo amazon-linux-extras install docker
 sudo service docker start
 
@@ -19,7 +18,7 @@ user=ramnar
 working_dir=/home/ec2-user/kube/src/k8s.io
 sudo mkdir -p $working_dir
 cd $working_dir
-sudo yum install git
+
 sudo git clone https://github.com/ramnar/kubernetes.git
 cd kubernetes/
 sudo git remote add upstream https://github.com/kubernetes/kubernetes.git
