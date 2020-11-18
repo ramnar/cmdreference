@@ -1,10 +1,10 @@
 # Steps to do after changing the code
 
-## To build a specific subsection of code in kubernetes
+## To build a specific subsection of code in kubernetes(relative to root directory)
 
 make WHAT=cmd/kubectl
 
-## To run unit test on a single package
+## To run unit test on a single package(relative to root directory)
 
 make test WHAT=./staging/src/k8s.io/kubectl/pkg/cmd/create GOFLAGS="-v"
 
