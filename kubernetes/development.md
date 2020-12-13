@@ -23,6 +23,8 @@ make test-integration WHAT=./test/integration/serviceaccount GOFLAGS="-v" KUBE_T
 
 ## To run single e2e test
 
+hack/verify-all.sh
+
 
 # References
 ## setup minikube in local linux box
